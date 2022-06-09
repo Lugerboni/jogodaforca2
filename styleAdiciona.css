@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter&family=Ubuntu:ital@1&display=swap'); 
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Anton', sans-serif;
+    position: relative;
+    background-color: ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color:gray
+}
+.header {
+    display: flex;
+    justify-content: flex-end;
+}
+.header .logo {
+    margin-right: 50px;
+    margin-top: 30px;
+}
+.home {
+    display: block;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    top: 30%;
+    bottom: 70%;
+    transform: translate(-50%, -50%);
+    flex: 1 0 auto;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+.home .home-container .title { 
+    font-family: 'Anton', sans-serif; 
+    margin-top: 375px;
+    font-size: 70px;
+    color: #EFEFEF;
+    -webkit-text-stroke: 2.5px palevioletred;
+    margin-bottom: 150px;
+}
+
+.area-texto{
+    font-family: 'Anton', sans-serif;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 2px solid white;
+    text-transform: uppercase;
+    text-align: center;
+}
+.botoes .salvar  {
+    padding: 5px;
+    font-size: 30px;
+    color: purple;
+    font-family: 'Anton', sans-serif;
+    width: 100px;
+    border-radius: 10px;    
+    border: 2px solid white; 
+    margin-bottom: 30px;
+    box-shadow: 5px 5px purple;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+.botoes .voltar{
+    padding: 5px;
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    width: 100px;
+    left: 50px;
+    border-radius: 10px;
+    border: 2px solid white; 
+    margin-bottom: 30px;
+    box-shadow: 5px 5px purple;
+    cursor: pointer;
+    transition: background-color .2s ;
+}
+.footer h3 {
+    font-weight: 300;    
+    margin-bottom: 10px;
+    cursor: default;
+    color: blue;
+    left: 50%;
+    right: 50%;
+}
+@media(min-width:320px){
+    .header .logo {
+        margin-right: 10px;
+        margin-top: 10px;
+        width: 50px;
+    }
+
+    .home .home-container .title {
+        font-size: 15px;
+        -webkit-text-stroke: 1.0px palevioletred
+    }
+    .area-texto{
+        width:120px;
+        height: 100px;
+    }
+    .max-palavra{
+        font-size: 10px;
+    }
+    .botoes .salvar {
+        font-size: 15px;
+        width: 50px;
+        left: 50px;
+        border-radius: 5px;
+        border: 1px solid white; 
+        box-shadow: 2px 2px purple;
+    }
+    .botoes .voltar{
+        font-size: 15px;
+        width: 50px;
+        left: 50px;
+        border-radius: 5px;
+        border: 1px solid white; 
+        box-shadow: 2px 2px purple;
+    }
+    .footer h3 {
+        font-size: 10px;
+    }
+}
+@media(min-width:375px){
+    .header .logo {
+        width: 70px;
+    }
+
+    .home .home-container .title {
+        font-size: 30px;
+        -webkit-text-stroke: 1.3px palevioletred
+    }
+    .area-texto{
+        width:150px;
+        height: 120px;
+    }
+    .max-palavra{
+        font-size: 12px;
+    }
+    .botoes .salvar {
+        font-size: 18px;
+        width: 70px;
+        left: 70px;
+        border-radius: 6px;
+        
+    }
+    .botoes .voltar{
+        font-size: 18px;
+        width: 70px;
+        left: 70px;
+        border-radius: 6px;
+    }
+    .footer h3 {
+        font-size: 12px;
+    }
+}
+
+@media(min-width:425px){
+    .header .logo {
+        width: 100px;
+    }
+
+    .home .home-container .title {
+        font-size: 50px;
+        -webkit-text-stroke: 1.6px palevioletred
+    }
+    .area-texto{
+        width: 180px;
+        height: 150px;
+    }
+    .max-palavra{
+        font-size: 14px;
+    }
+    .botoes .salvar {
+        font-size: 20px;
+        width: 100px;
+        left: 100px;
+        border-radius: 6px;
+        border: 2px solid white; 
+        box-shadow: 3px 3px purple;
+        
+    }
+    .botoes .voltar{
+        font-size: 20px;
+        width: 100px;
+        left: 100px;
+        border-radius: 8px;
+        border: 2px solid white; 
+        box-shadow: 3px 3px purple;
+    }
+    .footer h3 {
+        font-size: 15px;
+    }
+}
+
+@media(min-width:768px){
+    .header .logo {
+        width: 120px;
+    }
+
+    .home .home-container .title {
+        font-size: 70px;
+        -webkit-text-stroke: 2.0px palevioletred
+    }
+    .area-texto{
+        width: 300px;
+        height: 150px;
+    }
+    .max-palavra{
+        font-size: 16px;
+    }
+    .botoes .salvar {
+        font-size: 30px;
+        width: 130px;
+        left: 130px;
+        border-radius: 8px;
+        border: 4px solid white; 
+        box-shadow: 5px 5px purple;
+        
+    }
+    .botoes .voltar{
+        font-size: 30px;
+        width: 130px;
+        left: 130px;
+        border-radius: 8px;
+        border: 4px solid white; 
+        box-shadow: 5px 5px purple;
+    }
+    .footer h3 {
+        font-size:15px;
+    }
+}
+
+
+
+
+      
+
