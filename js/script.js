@@ -60,96 +60,87 @@ function escolheLetra(letra) {
 
             acertos++;
             acertou = true;
-            
-            
+                      
             
         }
     }
-
    
     if (acertou === false) {
         imagem++;
-        
        
-        document.getElementById("forca").src = "forca" + imagem + ".png";
-        
+        document.getElementById("forca").src = "/img/forca" + imagem + ".png";
         
         var botao = document.getElementById(letra);
-     
         
         botao.setAttribute('class', 'errada');
         botao.removeAttribute('onclick');
         
               chances--;
-        
     }
            
     if (chances === 0) {
         
-        let mensagem = document.createElement("p");
-        let t1 = document.createTextNode("Que pena você perdeu!");
-        mensagem.appendChild(t1);           
-              
+            let mensagem = document.createElement("p");
+            let t1 = document.createTextNode("Que pena você perdeu!");
+            mensagem.appendChild(t1);           
+                
+            
+            let botao = document.createElement("button");
+            let t2 = document.createTextNode("jogar novamente");
         
-        let botao = document.createElement("button");
-        let t2 = document.createTextNode("jogar novamente");
-      
-        botao.appendChild(t2);
-        botao.setAttribute('class', 'novo-bt');
-        botao.setAttribute('onclick', 'window.location.reload()');
-        
+            botao.appendChild(t2);
+            botao.setAttribute('class', 'novo-bt');
+            botao.setAttribute('onclick', 'window.location.reload()');
+            
 
-        let div = document.getElementById("novo");
-        div.appendChild(mensagem);
-        div.appendChild(botao);
+            let div = document.getElementById("novo");
+            div.appendChild(mensagem);
+            div.appendChild(botao);
     
     }
     
 
     if (acertos === palavra.length) {
 
-        let mensagem = document.createElement("p");
-        let t1 = document.createTextNode("Que legal você venceu!");
-        mensagem.appendChild(t1);
-        
-              
-        
-        let botao = document.createElement("button");
-        let t2 = document.createTextNode("jogar novamente");
+            let mensagem = document.createElement("p");
+            let t1 = document.createTextNode("Que legal você venceu!");
+            mensagem.appendChild(t1);
+            
+                
+            
+            let botao = document.createElement("button");
+            let t2 = document.createTextNode("jogar novamente");
 
-      
-        botao.appendChild(t2);
-        botao.setAttribute('class', 'novo-bt');
-        botao.setAttribute('onclick', 'window.location.reload()');
-    
-
-        let div = document.getElementById("novo");
-        div.appendChild(mensagem);
-        div.appendChild(botao);
         
-    
+            botao.appendChild(t2);
+            botao.setAttribute('class', 'novo-bt');
+            botao.setAttribute('onclick', 'window.location.reload()');
+        
+
+            let div = document.getElementById("novo");
+            div.appendChild(mensagem);
+            div.appendChild(botao);
     }
 }
 
 
-function adicionaFruta() {
-    if(inputFruta.value==''){
-        console.log("Não aceita valor vazio")
-        inputFruta.setAttribute('placeholder','não pode estar vazio')
-    }else{
-        palavras.push(inputFruta.value);
-        window.location.assign("index.html");
-        console.log(adicionaFruta);
-    }
+    function adicionaFruta() {
+        if(inputFruta.value==''){
+            console.log("Não aceita valor vazio")
+            inputFruta.setAttribute('placeholder','não pode estar vazio')
+        }else{
+            palavras.push(inputFruta.value);
+            window.location.assign("index.html");
+            console.log(adicionaFruta);
+        }
 
-    if(inputFruta.value.length != 0) {
-        frutaAdicionada.push(inputFruta.value);
-        localStorage.setItem("palavras", JSON.stringify(frutaAdicionada));
-        palavras.push(frutaAdicionada.value);
-        window.location.assign("index.html");
-        console.log(adicionaFruta);
-        
-        
+        if(inputFruta.value.length != 0) {
+            frutaAdicionada.push(inputFruta.value);
+            localStorage.setItem("palavras", JSON.stringify(frutaAdicionada));
+            palavras.push(frutaAdicionada.value);
+            window.location.assign("index.html");
+            console.log(adicionaFruta);
+            
     }
 }
 
