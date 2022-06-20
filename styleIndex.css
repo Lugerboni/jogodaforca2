@@ -1,273 +1,211 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter&family=Ubuntu:ital@1&display=swap'); 
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    width: 100%;
-    height: 100%;
     font-family: 'Anton', sans-serif;
+    position: relative;
+    background-color: ffffff;
+    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     background-color:gray
 }
-
-
-.flex-container-1 {    
-   
+.header {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.header .logo {
+    margin-right: 50px;
+    margin-top: 30px;
+}
+.home {
+    display: block;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    top: 30%;
+    bottom: 70%;
+    transform: translate(-50%, -50%);
+    flex: 1 0 auto;
+}
+
+.home-container {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.flex-container-1 .title {
-   
-    margin-top: 30px;
-    font-size: 20px;
+.home .home-container .title {
+    margin-top: 150px;
+    font-size: 70px;
     color: #EFEFEF;
-    -webkit-text-stroke: 1.6px palevioletred;
-    font-family: 'Anton', sans-serif;
+    -webkit-text-stroke: 2.5px palevioletred;
+    margin-bottom: 150px;
 }
-.flex-container-1 .dica{
-    -webkit-text-stroke: 1.0px palevioletred;
-    font-size: 15px; 
-    color: #FFFFFF;
-    left: 30px;
-    font-family: 'Anton', sans-serif;
-
-}
-
-.flex-container-2 {   
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 1em;
-    margin-top: 30px;
-}
-
-.flex-container-2-2 {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-   
-    margin-top: 30px;   
-    
-}
-#forca{
-    width: 200px;
-    height: 150px;
-    margin-left: 70px;
-    
-}
-
-.flex-container-3 {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-top: 10px;
-}
-
-
-h1 {
-    font-size: 36px;
-    text-transform: uppercase;
-    font-family: 'Anton', sans-serif;
-}
-
-h2{ 
-    font-family: 'Anton', sans-serif;
+.home .home-container .jogar {
+    padding: 5px;
     font-size: 30px;
-    color: #EFEFEF;
-    -webkit-text-stroke: 1.5px palevioletred;
-     text-transform: uppercase;
-}
-
-
-p {
-    font-family: 'Anton', sans-serif;
-    font-size: 10px;
-}
-.novo-bt{
-    font-family: 'Anton', sans-serif;
-    font-size:8px;
-    width: 30px;
-    height: 50px;
-    
-}
-
-span {
-    display: flex;
-  width: 15px;
-  text-align:center;
-  border-bottom: 2px solid purple;
-  color: #FFFFFF;
-  padding: 2px;
-  margin-left: 1px;
-  margin-right: 2px;
-  text-transform: uppercase;
-  font-size: 1.2em;
-
-}
-
-
-button {    
-    background-color: purple;
-    width: 25px;
-    height: 25px; 
-    cursor: pointer;  
-    border-radius: 5px;
-    border: 1px solid #FFFFFF;
-    color: #FFFFFF;
-    font-family: 'Anton', sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    
-
-}
-#desistir {    
-    display:flex ;
-    justify-content: center;
-    margin: 30px;
-    margin-top: 300px;
-    width: 101px;
-    height: 50px;    
-    padding: 10px 0;
-    background-color:rgb(236, 231, 241);
-    color: black;    
-    border: 1px solid purple;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 18px;
+    font-family:'Anton', sans-serif;
+    width: 280px;
+    border-radius: 10px;
+    border: 2px solid white; 
+    margin-bottom: 30px;
+    box-shadow: 5px 5px purple;
     cursor: pointer;
-    text-transform: uppercase;
-
+    transition: background-color .2s;
+}
+.home .home-container .jogar:hover {
+    background-color: palevioletred;
+}
+.home .home-container .jogar:active {
+    padding: 4px 5px;
+    border: 1px solid ;
+    
+}
+.home .home-container .adiciona {
+    padding: 5px;
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    width: 280px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 5px 5px purple;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+.home .home-container .adiciona:hover {
+    background-color: palevioletred;
 }
 
-button:hover {
-    background-color: #dd30b8;
-}
-
-button.novo-bt {
-    width: auto;
-    padding: 10px;
-}
-
-.certa, .certa:hover {
-    background: palevioletred;
-    border: 1px solid palevioletred;
-    cursor: inherit;
-}
-
-    .errada, .errada:hover {
-    background: black;
-    border: 1px solid powderblue;
-    cursor: inherit;
-} 
-    .footer {
+.footer {
     position: absolute;
+    bottom: 0;
     left: 50%;
     right: 50%;
     transform: translateX(-50%);
-     display: flex;
+    width: 300px;
+    height: 50px;
+    display: flex;
     flex-direction: column;
     align-items: center;
-     width: 100%;
+    flex-shrink: 0;
     text-align: center;
     color: blue;
-    margin-top: 5px;
-    font-size: 10px;
-   
+    margin-bottom: 20px;
+    margin-top: auto;
+    margin-bottom: 20px; 
 }
-    .footer h3 {
-    font-weight: 100px;
+.footer h3 {
+    font-weight: 200px;
     margin-bottom: 10px;
     cursor: default;
-    
 }
-
-@media (min-width:320px) {
-    span{
-    font-size: 13px;
-}
-
-    button{
-    width: 15px;
-    height: 15px;
-    font-size: 10px;
-       
-}
-    #desistir{
-    font-size: 10px;
-    width: 50px;
-    height: 30px;
-    margin-right: 100px;
-    }   
-}
-
-@media (min-width:375px){
-    span{
-    font-size: 15px;
-} 
-    
-    button{
-    width: 18px;
-    height: 18px;
-    font-size: 12px;
-       
+@media ( min-width: 320px){
+    .header .logo {
+        margin-right: 30px;
+        margin-top: 30px;
+        width: 60px;
+    }
+    .home .home-container .title{
+        font-size: 40px;
+    }
+    .home .home-container .jogar {
+        width: 100px;  
+        font-size: 15px;    
+    }
+    .home .home-container .adiciona{
+        width: 150px;
+        font-size: 15px;
+    }
+    .footer h3 {
+      font-size: 9px;
     }
 }
-
-@media (min-width:768px){
-    .flex-container-1 .title {
-   
+@media ( min-width: 376px){
+    .header .logo {
+        margin-right: 30px;
+        margin-top: 30px;
+        width: 100px;
+    }
+    .home .home-container .title{
+        font-size: 50px;
+    }
+    .home .home-container .jogar {
+        width: 130px;  
+        font-size: 20px;    
+    }
+    .home .home-container .adiciona{
+        width: 160px;
+        font-size: 20px;
+    }
+    .footer h3 {
         margin-top: 20px;
+      font-size: 11px;
+    }
+}
+@media (min-width:425px){
+    .footer h3{
+        margin-top: 20px;
+    }
+    
+}
+
+@media ( min-width: 768px){
+    .header .logo {
+        margin-right: 30px;
+        margin-top: 30px;
+        width: 100px;
+    }
+    .home .home-container .title{
+        font-size: 80px;
+    }
+    .home .home-container .jogar {
+        width: 150px;  
+        font-size: 30px;  
+          
+    }
+    .home .home-container .adiciona{
+        width: 230px;
         font-size: 30px;
     }
-    .flex-container-1 .dica{       
-        font-size: 20px; 
-          
-    }    
-    
-    button{
-        width: 25px;
-        height: 25px;
+         
+    .footer h3 {
         font-size: 14px;
-    }
-     #forca{
-            width: 200px;
-            height: 250px;
-            margin-left: 30px;
+      margin-top: 50px;
             
-   }
-    span {
-          font-size: 1.2em;
-          width: 20px;
-        
-        }
-    #desistir{
-            font-size: 13px;
-            width: 60px;
-            height: 40px;
-            margin-right: 100px;
-            }  
-     p {
-              
-                font-size: 15px;
-            }
-     .novo-bt{
-                font-size: 12px;
-                width: 50px;
-                height: 40px;
-                
-            } 
-        
     }
+}
+@media ( min-width: 1024px){
+    .header .logo {
+        margin-right: 30px;
+        margin-top: 30px;
+        width: 200px;
+    }
+    .home .home-container .title{
+        font-size: 100px;
+    }
+    .home .home-container .jogar {
+        width: 200px;  
+        font-size: 40px;  
+          
+    }
+    .home .home-container .adiciona{
+        width: 300px;
+        font-size: 40px;
+    }
+         
+    .footer h3 {
+        font-size: 14px;
+        margin-top: 60px;
+            
+    }
+}
     
 
-
-
-  
