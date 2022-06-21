@@ -68,7 +68,7 @@ function escolheLetra(letra) {
     if (acertou === false) {
         imagem++;
        
-        document.getElementById("forca").src = "/img/forca" + imagem + ".png";
+        document.getElementById("forca").src = "forca" + imagem + ".png";
         
         var botao = document.getElementById(letra);
         
